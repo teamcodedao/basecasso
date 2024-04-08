@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
-import mcdonals from './mcdonals.png';
+import maccas from './maccas.png';
 
 export default function Home() {
   return (
     <main className='min-h-screen relative'>
       <Image
-        src={mcdonals}
+        src={maccas}
         fill
         priority
         quality={100}

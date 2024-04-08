@@ -2,8 +2,9 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Mcdonalds',
-  description: 'Mcdonalds',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_METADATABASE_URL),
+  title: 'MACCAS',
+  description: 'MACCAS',
 };
 
 export default function RootLayout({
