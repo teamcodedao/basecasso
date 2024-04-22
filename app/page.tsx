@@ -11,7 +11,7 @@ export default function Home() {
         quality={100}
         priority
         alt=''
-        className='w-screen h-screen object-cover'
+        className='w-screen h-screen object-cover object-bottom'
       />
       <div
         className={clsx(
@@ -47,7 +47,10 @@ export default function Home() {
         <a
           href={process.env.NEXT_PUBLIC_COIN_URL}
           target='_buy'
-          className='text-[40px] border-4 rounded-[19px] border-white px-8 py-px inline-block mt-5'
+          className={clsx(
+            'text-[40px] border-4 rounded-[19px] border-white px-8 py-px inline-block mt-5 transition',
+            'hover:multi-[`text-[#1861FF];bg-white`]'
+          )}
         >
           BUY $BACASO
         </a>
