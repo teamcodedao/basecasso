@@ -7,8 +7,12 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      dropShadow: {
+        normal: '0 4px 4px rgba(0, 0, 0, 0.25)',
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-multi')],
 };
 export default config;

@@ -1,11 +1,17 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type {Metadata} from 'next';
+import localFont from 'next/font/local';
+
+import './globals.css';
+
+const font = localFont({
+  src: './Flavors-Regular.ttf',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATABASE_URL),
-  title: "UTYA Blue",
-  description:
-    "$UTYAB Spreading Joys and Positivity via The Signature Telegram Duck Emoji. ",
+  title: 'Basecasso',
+  description: 'Basecasso',
 };
 
 export default function RootLayout({
@@ -14,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang='en'>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }

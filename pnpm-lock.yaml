@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  clsx:
+    specifier: ^2.1.0
+    version: 2.1.0
   next:
     specifier: 14.1.4
     version: 14.1.4(react-dom@18.2.0)(react@18.2.0)
@@ -40,6 +43,9 @@ devDependencies:
   tailwindcss:
     specifier: ^3.3.0
     version: 3.4.3
+  tailwindcss-multi:
+    specifier: ^0.3.34
+    version: 0.3.34
   typescript:
     specifier: ^5
     version: 5.4.4
@@ -693,6 +699,11 @@ packages:
 
   /client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: false
+
+  /clsx@2.1.0:
+    resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert@2.0.1:
@@ -2615,6 +2626,15 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: true
+
+  /tailwindcss-multi@0.3.34:
+    resolution: {integrity: sha512-oLdYADdvfJQx3Qv8JmQ3Ul1GIL/crreZ7YY+RQCw2Z9GW4jWb0rWnpCgTVktWV0At6+4NUAk17AE/TGLQCrShw==}
+    dependencies:
+      '@types/node': 20.12.5
+      tailwindcss: 3.4.3
+    transitivePeerDependencies:
+      - ts-node
     dev: true
 
   /tailwindcss@3.4.3:
