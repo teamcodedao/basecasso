@@ -26,14 +26,22 @@ export default function Home() {
           'max-[635px]:multi-[`w-full;bottom-14;right-0;justify-center`]'
         )}
       >
-        <a href={process.env.NEXT_PUBLIC_TWITTER_URL} target='_twitter'>
+        <a
+          href={process.env.NEXT_PUBLIC_TWITTER_URL}
+          target='_twitter'
+          className='transition-all hover:multi-[`scale-105;rotate-[-360deg]`]'
+        >
           <img
             src='/twitter.svg'
             alt=''
             className='h-[70px] aspect-square drop-shadow-normal'
           />
         </a>
-        <a href={process.env.NEXT_PUBLIC_TELEGRAM_URL} target='_telegram'>
+        <a
+          href={process.env.NEXT_PUBLIC_TELEGRAM_URL}
+          target='_telegram'
+          className='transition-all hover:multi-[`scale-105;rotate-[360deg]`]'
+        >
           <img
             src='/telegram.svg'
             alt=''
