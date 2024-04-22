@@ -1,9 +1,16 @@
+'use client';
+
 import Image from 'next/image';
 import clsx from 'clsx';
+import {Thursday} from 'moving-letters';
+
+import {useMounted} from '@/lib/use-mounted';
 
 import background from './background.png';
 
 export default function Home() {
+  const isMounted = useMounted();
+
   return (
     <main className='relative overflow-hidden'>
       <Image
@@ -22,14 +29,14 @@ export default function Home() {
         <a href={process.env.NEXT_PUBLIC_TWITTER_URL} target='_twitter'>
           <img
             src='/twitter.svg'
-            alt='twitter'
+            alt=''
             className='h-[70px] aspect-square drop-shadow-normal'
           />
         </a>
         <a href={process.env.NEXT_PUBLIC_TELEGRAM_URL} target='_telegram'>
           <img
             src='/telegram.svg'
-            alt='telegram'
+            alt=''
             className='h-[70px] aspect-square drop-shadow-normal'
           />
         </a>
@@ -41,7 +48,9 @@ export default function Home() {
         )}
       >
         <hgroup>
-          <h1 className='text-8xl'>Basecasso</h1>
+          <div className='text-8xl'>
+            {isMounted ? <Thursday text='Basecasso' /> : <h1>Basecasso</h1>}
+          </div>
           <p className='text-[40px]'>Supply: 50.000.000</p>
         </hgroup>
         <a
